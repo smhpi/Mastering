@@ -1,13 +1,12 @@
-function longestWord(str) {
-  var array1 = str.match(/\w[a-z]{0,}/gi);
-  var result = array1[0];
+function longestWord(sen) {
+  var array1 = sen.match(/\w[a-z]{0,}/gi);
 
-  for (var x = 1; x < array1.length; x++) {
-    if (result.length < array1[x].length) {
-      result = array1[x];
+  var result = array1[0];
+  for (var i = 1; i < array1.length; i++) {
+    if (result.length < array1[i].length) {
+      result = array1[i];
     }
   }
-  return result;
+  return "longest word in the sentence is " + result;
 }
-
-console.log(longestWord("Using the JavaScript language, have the function"));
+console.log(longestWord("here is test Javascript"));
